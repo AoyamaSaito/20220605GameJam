@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Hikanyan's_Asset/Scene/GameOver.unity
     guid: 993e4bc8ab1dccc4da365c3ddb53faa9
+  - enabled: 1
+    path: Assets/Hikanyan's_Asset/Scene/GameClear.unity
+    guid: 450ac50161456f84c93eceb55df9aa50
   m_configObjects: {}
