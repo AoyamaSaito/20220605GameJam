@@ -30,7 +30,7 @@ public class RiverManager : MonoBehaviour
     private void Init()
     {
         _onStageRiver = new List<River>(0);
-        _rivers.OrderBy(go => Guid.NewGuid());
+        _rivers = _rivers.OrderBy(go => Guid.NewGuid()).ToArray();
 
         var go = Instantiate(_firstRiver, Vector3.zero, Quaternion.identity);
         var river = go.GetComponent<River>();

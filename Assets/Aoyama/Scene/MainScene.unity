@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SampleRiver
       objectReference: {fileID: 0}
+    - target: {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 722029749841155902, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -294,16 +298,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _firstRiver: {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
-  _secondRiver: {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
-  _thirdRiver: {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
+  _secondRiver: {fileID: 2705635173689349956, guid: bf3e9d27fb70ba44680769dae48726c4, type: 3}
+  _thirdRiver: {fileID: 6469691460988883217, guid: 3e29a1b2ecd69e84f97a5e1047c346a2, type: 3}
   _rivers:
-  - {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
-  - {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
-  - {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
-  - {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
-  - {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
-  - {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
-  - {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
+  - {fileID: 2705635173689349956, guid: bf3e9d27fb70ba44680769dae48726c4, type: 3}
+  - {fileID: 6469691460988883217, guid: 3e29a1b2ecd69e84f97a5e1047c346a2, type: 3}
+  - {fileID: 5021795900880812437, guid: 6c46ee132ae1e3b4e821ec333d12a1b1, type: 3}
+  - {fileID: 2590662985862826400, guid: 5a2e7a1eb43c58a4396ddcb78fc5c8ea, type: 3}
+  - {fileID: 5989313897400495981, guid: ba302117d5af0b14e8ef47c88bf5642c, type: 3}
+  - {fileID: 4226632768257779861, guid: 2e3e717c807849b46a95b2880c93e312, type: 3}
+  - {fileID: 6241964638662667094, guid: a6e0695c015dec94c9c1a0d6480686a0, type: 3}
+  - {fileID: 2705635173689349956, guid: bf3e9d27fb70ba44680769dae48726c4, type: 3}
+  - {fileID: 6469691460988883217, guid: 3e29a1b2ecd69e84f97a5e1047c346a2, type: 3}
+  - {fileID: 5021795900880812437, guid: 6c46ee132ae1e3b4e821ec333d12a1b1, type: 3}
+  - {fileID: 2590662985862826400, guid: 5a2e7a1eb43c58a4396ddcb78fc5c8ea, type: 3}
+  - {fileID: 5989313897400495981, guid: ba302117d5af0b14e8ef47c88bf5642c, type: 3}
+  - {fileID: 4226632768257779861, guid: 2e3e717c807849b46a95b2880c93e312, type: 3}
+  - {fileID: 6241964638662667094, guid: a6e0695c015dec94c9c1a0d6480686a0, type: 3}
   _goalRiver: {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
   _downInterval: 12.5
 --- !u!4 &1110830898
