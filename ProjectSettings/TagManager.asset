@@ -7,6 +7,7 @@ TagManager:
   - SpeedUp
   - SpeedDown
   - GameClear
+  - GameOver
   layers:
   - Default
   - TransparentFX

@@ -19,13 +19,14 @@ public class ChangeAlpha : MonoBehaviour
         
     }
 
+
     // Update is called once per frame
     void Update()
     {
         // åoâﬂéûä‘Çâ¡éZ
         timer += Time.deltaTime;
         AlphaChangeOn();
-        if (timer > 10)
+        if (timer > 10)//è\ïbÇΩÇ¡ÇΩÇÁ
         {
             AlphaChangeOff();
         }
