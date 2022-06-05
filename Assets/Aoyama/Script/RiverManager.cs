@@ -4,14 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class FallRiver : SingletonMonoBehaviour<FallRiver>
+public class RiverManager : SingletonMonoBehaviour<RiverManager>
 {
     [SerializeField]
     private GameObject _firstRiver;
     [SerializeField]
+    private GameObject _secondRiver;
+    [SerializeField]
+    private GameObject _thirdRiver;
+    [SerializeField]
     private GameObject[] _rivers;
     [SerializeField]
     private GameObject _goalRiver;
+
     [SerializeField] 
     private float _downInterval = 30;
 
@@ -33,13 +38,13 @@ public class FallRiver : SingletonMonoBehaviour<FallRiver>
         river._fallRiver = this;
         river.OutAria += InstantiateRiver;
 
-        var go1 = Instantiate(_firstRiver, new Vector3(0, _downInterval, 0), Quaternion.identity);
+        var go1 = Instantiate(_secondRiver, new Vector3(0, _downInterval, 0), Quaternion.identity);
         var river1 = go1.GetComponent<River>();
         _onStageRiver.Add(river1);
         river1._fallRiver = this;
         river1.OutAria += InstantiateRiver;
 
-        var go2 = Instantiate(_firstRiver, new Vector3(0, _downInterval * 2, 0), Quaternion.identity);
+        var go2 = Instantiate(_thirdRiver, new Vector3(0, _downInterval * 2, 0), Quaternion.identity);
         var river2 = go2.GetComponent<River>();
         _onStageRiver.Add(river2);
         river2._fallRiver = this;
@@ -59,7 +64,8 @@ public class FallRiver : SingletonMonoBehaviour<FallRiver>
     int _index = 0;
     private void InstantiateRiver()
     {
-        if(_index == _rivers.Length)
+        Debug.Log("Instantiate");
+        if(_index == _rivers.Length || _rivers == null)
         {
             var go1 = Instantiate(_goalRiver, transform.position, Quaternion.identity);
             var river1 = go1.GetComponent<River>();
@@ -68,12 +74,12 @@ public class FallRiver : SingletonMonoBehaviour<FallRiver>
             river1.OutAria += InstantiateRiver;
         }
 
-        _index++;
         var go = Instantiate(_rivers[_index], transform.position, Quaternion.identity);
         var river = go.GetComponent<River>();
         _onStageRiver.Add(river);
         river._fallRiver = this;
         river.OutAria += InstantiateRiver;
+        _index++;
     }
 
     public void RiverRemove(River r)

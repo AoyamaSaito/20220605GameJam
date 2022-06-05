@@ -8,12 +8,13 @@ public class River : MonoBehaviour
     public event Action OutAria;
     [HideInInspector] 
     public float _speedMagnification = 1;
+    [HideInInspector]
+    public RiverManager _fallRiver;
 
     [SerializeField]
     private float _destroyY = -15f;
 
     private float _speed = 0.1f;
-    public FallRiver _fallRiver;
 
     private void FixedUpdate()
     {
