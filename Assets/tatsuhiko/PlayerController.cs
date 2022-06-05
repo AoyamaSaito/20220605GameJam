@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] Timer timer;
     [SerializeField] RiverManager _fallRiver;
+    [SerializeField] GameObject _damageParticle;
+    [SerializeField] GameObject _oishiiParticle;
     [SerializeField] float m_speed = 10f;
     [SerializeField] string _speedUpTag = "SpeedUp";
     [SerializeField] string _speedDownTag = "SpeedDown";
