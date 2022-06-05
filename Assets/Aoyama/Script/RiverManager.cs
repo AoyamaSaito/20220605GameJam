@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class RiverManager : SingletonMonoBehaviour<RiverManager>
+public class RiverManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject _firstRiver;
@@ -38,17 +38,17 @@ public class RiverManager : SingletonMonoBehaviour<RiverManager>
         river._fallRiver = this;
         river.OutAria += InstantiateRiver;
 
-        var go1 = Instantiate(_secondRiver, new Vector3(0, _downInterval, 0), Quaternion.identity);
-        var river1 = go1.GetComponent<River>();
-        _onStageRiver.Add(river1);
-        river1._fallRiver = this;
-        river1.OutAria += InstantiateRiver;
+        go = Instantiate(_secondRiver, new Vector3(0, _downInterval, 0), Quaternion.identity);
+        river = go.GetComponent<River>();
+        _onStageRiver.Add(river);
+        river._fallRiver = this;
+        river.OutAria += InstantiateRiver;
 
-        var go2 = Instantiate(_thirdRiver, new Vector3(0, _downInterval * 2, 0), Quaternion.identity);
-        var river2 = go2.GetComponent<River>();
-        _onStageRiver.Add(river2);
-        river2._fallRiver = this;
-        river2.OutAria += InstantiateRiver;
+        go = Instantiate(_thirdRiver, new Vector3(0, _downInterval * 2, 0), Quaternion.identity);
+        river = go.GetComponent<River>();
+        _onStageRiver.Add(river);
+        river._fallRiver = this;
+        river.OutAria += InstantiateRiver;
     }
 
     public void StopRiver()
