@@ -6,20 +6,14 @@ using UnityEngine;
 public class River : MonoBehaviour
 {
     public event Action OutAria;
-
-    [HideInInspector]
-    public float _speed = 0.000001f;
+    [HideInInspector] 
+    public float _speedMagnification = 1;
 
     [SerializeField]
     private float _destroyY = -15f;
 
-    float _timer = 0f;
-    Transform tr;
-
-    private void Start()
-    {
-        tr = transform;
-    }
+    private float _speed = 0.1f;
+    public FallRiver _fallRiver;
 
     private void FixedUpdate()
     {
@@ -28,13 +22,12 @@ public class River : MonoBehaviour
 
     private void Down()
     {
-        float _i = 0.1f;
-        transform.position = new Vector3(tr.position.x, transform.position.y - _i, tr.position.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y - _speed * _speedMagnification, transform.position.z);
 
         if (transform.position.y <= _destroyY)
         {
             Destroy(gameObject);
-            FallRiver.Instance.RiverRemove(this);
+            _fallRiver.RiverRemove(this);
             OutAria();
         }
     }
