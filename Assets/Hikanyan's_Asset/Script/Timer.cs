@@ -9,16 +9,18 @@ public class Timer : MonoBehaviour
 {
     
     private float countTime = 0.000f;//初期値0.000
-    public bool StopFlag = false;
+    private bool StopFlag = false;
 
     Text _test = null;
     private void Start()
     {
         _test = GetComponent<Text>();
-    }
+        StopFlag = false;
+}
 
     void Update()
     {
+        if (StopFlag == true) this.enabled = false;
         countTime += Time.deltaTime;//＋カウントタイム
         _test.text = countTime.ToString("F2");//Textに表示
        
@@ -31,6 +33,7 @@ public class Timer : MonoBehaviour
 
     public void TimerStop()
     {
+        StopFlag = false;
         _test.text = countTime.ToString("F2");//Textに表示
         Debug.Log("Nyan");
     }
