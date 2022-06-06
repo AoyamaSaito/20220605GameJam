@@ -23,11 +23,11 @@ public class Timer : MonoBehaviour
         countTime += Time.deltaTime;//＋カウントタイム
         _timer1.text = countTime.ToString("F2");//Textに表示
        
-        if (Input.GetKey(KeyCode.Space))
-        {
-            TimerStop();
-            Debug.Log("StopFlag=true");
-        }
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+        //    TimerStop();
+        //    Debug.Log("StopFlag=true");
+        //}
     }
 
     public void TimerStop()
