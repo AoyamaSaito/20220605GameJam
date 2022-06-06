@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _rb2D = GetComponent<Rigidbody2D>();
+        _hpText.text = hp.ToString();
     }
 
     // Update is called once per frame
