@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         if (hitTag == _speedUpTag)
         {
             Destroy(col.gameObject);
-            HitEffectCor(_oishiiParticle);
+            StartCoroutine(HitEffectCor(_oishiiParticle));
             _gameSpeed += _SpeedChange;
             if (_fallRiver)
             {
@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (hitTag == _speedDownTag)
         {
+            Destroy(col.gameObject);
             StartCoroutine(HitEffectCor(_damageParticle));
             _gameSpeed -= _SpeedChange;
             _gameSpeed = Mathf.Max(0.4f, _gameSpeed);
