@@ -21,6 +21,7 @@ public class RiverManager : MonoBehaviour
     private float _downInterval = 30;
 
     List<River> _onStageRiver = new ();
+    float _speedMag = 0;
 
     private void Start()
     {
@@ -58,24 +59,30 @@ public class RiverManager : MonoBehaviour
 
     public void UpdateSpeed(float _speedChange)
     {
-        _onStageRiver.ForEach(go => go._speedMagnification = _speedChange);
+        _speedMag = _speedChange;
+        _onStageRiver.ForEach(go => go._speedMagnification = _speedMag);
     }
 
     int _index = 0;
+    GameObject go = null;
+    River river = null;
     private void InstantiateRiver()
     {
         Debug.Log("Instantiate");
         if(_index == _rivers.Length || _rivers == null)
         {
-            var go1 = Instantiate(_goalRiver, transform.position, Quaternion.identity);
-            var river1 = go1.GetComponent<River>();
-            _onStageRiver.Add(river1);
-            river1._fallRiver = this;
-            river1.OutAria += InstantiateRiver;
+            go = Instantiate(_goalRiver, transform.position, Quaternion.identity);
+            river = go.GetComponent<River>();
+            river._speedMagnification = _speedMag;
+            _onStageRiver.Add(river);
+            river._fallRiver = this;
+            river.OutAria += InstantiateRiver;
+            return;
         }
 
-        var go = Instantiate(_rivers[_index], transform.position, Quaternion.identity);
-        var river = go.GetComponent<River>();
+        go = Instantiate(_rivers[_index], transform.position, Quaternion.identity);
+        river = go.GetComponent<River>();
+        river._speedMagnification = _speedMag;
         _onStageRiver.Add(river);
         river._fallRiver = this;
         river.OutAria += InstantiateRiver;
