@@ -2,22 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 8
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Effect_03_Beam_2
-  m_Shader: {fileID: 4800000, guid: b2270d98e1c63e24d9142f21ad3343c6, type: 3}
-  m_ValidKeywords:
-  - IS_NORMAL_ANIMATE
-  - IS_NORMAL_DISTORTION
-  - IS_SOFT_PARTICLES
-  - IS_TEXCOORD_MOVE
-  - IS_TEXTURE_ANIMATE
-  m_InvalidKeywords:
-  - IS_UNITY_PARTICLE_INSTANCING_ENABLED
-  - _ALPHAPREMULTIPLY_ON
+  m_Shader: {fileID: 4800000, guid: 1d58a8e283100ea4f8435e923e54553e, type: 3}
+  m_ShaderKeywords: IS_NORMAL_ANIMATE IS_NORMAL_DISTORTION IS_SOFT_PARTICLES IS_TEXCOORD_MOVE
+    IS_TEXTURE_ANIMATE IS_UNITY_PARTICLE_INSTANCING_ENABLED _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -91,7 +84,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
     m_Floats:
     - _BlendDst: 1
     - _BlendOp: 0
@@ -117,7 +109,6 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Impact: 0
-    - _ImpactFactor: 1
     - _ImpactSize: 0.5
     - _InvFade: 1
     - _Lighting: 0
@@ -127,7 +118,6 @@ Material:
     - _MaskCutOut: 1
     - _MaskFade: 0
     - _MaskOffsetFactor: 1
-    - _MaxIndex: 2
     - _Metallic: 0
     - _MixedMove: 0
     - _Mode: 3
@@ -143,7 +133,6 @@ Material:
     - _RimLight: 0
     - _RimScale: 2
     - _RimStrength: 1
-    - _SecondColor: 0
     - _SmoothnessTextureChannel: 0
     - _SoftParticle: 1
     - _SoftParticlesEnabled: 0
@@ -156,9 +145,7 @@ Material:
     - _TexPosMove: 1
     - _TexcoordMove: 1
     - _TexcoordMoveStrength: 30
-    - _TexcoordMoveUsingCustom: 0
     - _TextureAnimate: 1
-    - _TextureAnimateAdvanced: 0
     - _TextureAnimateSpeed: 0.15
     - _TextureAnimateStyle: 0
     - _TextureBlend: 0
@@ -180,5 +167,3 @@ Material:
     - _RimColor: {r: 0.9716981, g: 0, b: 0.009329386, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _TintColor: {r: 0, g: 0.6349675, b: 4.885221, a: 1}
-    - _TintColor2: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
