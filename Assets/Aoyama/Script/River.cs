@@ -6,7 +6,7 @@ using UnityEngine;
 public class River : MonoBehaviour
 {
     public event Action OutAria;
-    [HideInInspector] 
+
     public float _speedMagnification = 1;
     [HideInInspector]
     public RiverManager _fallRiver;

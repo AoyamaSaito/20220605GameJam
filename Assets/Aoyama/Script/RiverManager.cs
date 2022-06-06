@@ -21,7 +21,7 @@ public class RiverManager : MonoBehaviour
     private float _downInterval = 30;
 
     List<River> _onStageRiver = new ();
-    float _speedMag = 0;
+    float _speedMag = 1;
 
     private void Start()
     {
@@ -54,6 +54,7 @@ public class RiverManager : MonoBehaviour
 
     public void StopRiver()
     {
+        _speedMag = 0;
         _onStageRiver.ForEach(go => go._speedMagnification = 0);
     }
 
