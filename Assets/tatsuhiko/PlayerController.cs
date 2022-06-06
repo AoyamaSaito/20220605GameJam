@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (hitTag == _speedDownTag)
         {
-            HitEffectCor(_damageParticle);
+            StartCoroutine(HitEffectCor(_damageParticle));
             _gameSpeed -= _SpeedChange;
             if (_fallRiver)
             {
@@ -90,8 +90,6 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator HitEffectCor(GameObject go)
     {
-        if (go == null) yield return 0;
-
         go.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         go.SetActive(false);
