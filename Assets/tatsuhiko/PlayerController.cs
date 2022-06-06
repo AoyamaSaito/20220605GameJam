@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
         if (hitTag == _speedUpTag)
         {
             Destroy(col.gameObject);
+            HitEffectCor(_oishiiParticle);
             _gameSpeed += _SpeedChange;
             if (_fallRiver)
             {
@@ -53,6 +54,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (hitTag == _speedDownTag)
         {
+            HitEffectCor(_damageParticle);
             _gameSpeed -= _SpeedChange;
             if (_fallRiver)
             {
@@ -63,7 +65,7 @@ public class PlayerController : MonoBehaviour
         {
             if (_fallRiver)
             {
-                _fallRiver.UpdateSpeed(_gameSpeed);
+                _fallRiver.StopRiver();
             }
             if (timer)
             {
@@ -85,4 +87,13 @@ public class PlayerController : MonoBehaviour
     //      break;
     //  }
     //}
+
+    IEnumerator HitEffectCor(GameObject go)
+    {
+        if (go == null) yield return 0;
+
+        go.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        go.SetActive(false);
+    }
 }
