@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject _damageParticle;
     [SerializeField] GameObject _oishiiParticle;
     [SerializeField] float m_speed = 10f;
+    [SerializeField] float _SpeedChange;
     [SerializeField] string _speedUpTag = "SpeedUp";
     [SerializeField] string _speedDownTag = "SpeedDown";
     [SerializeField] string _clearTag = "GameClear";
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour
         if (hitTag == _speedUpTag)
         {
             Destroy(col.gameObject);
-            _gameSpeed += 0.1f;
+            _gameSpeed += _SpeedChange;
             if (_fallRiver)
             {
                 _fallRiver.UpdateSpeed(_gameSpeed);
@@ -52,7 +53,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (hitTag == _speedDownTag)
         {
-            _gameSpeed -= 0.1f;
+            _gameSpeed -= _SpeedChange;
             if (_fallRiver)
             {
                 _fallRiver.UpdateSpeed(_gameSpeed);
