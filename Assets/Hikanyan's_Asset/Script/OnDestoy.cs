@@ -9,6 +9,6 @@ public class OnDestoy : MonoBehaviour
     // Start is called before the first frame update
     private void OnDestroy()
     {
-        Destroy(Instantiate(_destroyPrefab, transform.position, Quaternion.identity, transform.parent), 2f);
+        Destroy(Instantiate(_destroyPrefab, transform.position, Quaternion.identity), 2f);
     }
 }

@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3931450237972781630, guid: bf9a944f8941f674a94b66a9c7f8bb7b, type: 3}
       propertyPath: m_Name
-      value: River1 Variant (1)
+      value: River1 Variant (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4464991183107940488, guid: bf9a944f8941f674a94b66a9c7f8bb7b, type: 3}
       propertyPath: m_RootOrder
@@ -69,6 +69,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2067551659269223825}
     m_Modifications:
+    - target: {fileID: 2830771273645463246, guid: da3cb047d2e907c469d22a1eca3e2280, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8714090902277464429, guid: da3cb047d2e907c469d22a1eca3e2280, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -142,6 +146,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2067551659269223825}
     m_Modifications:
+    - target: {fileID: 2830771273645463246, guid: da3cb047d2e907c469d22a1eca3e2280, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8714090902277464429, guid: da3cb047d2e907c469d22a1eca3e2280, type: 3}
       propertyPath: m_RootOrder
       value: 17
