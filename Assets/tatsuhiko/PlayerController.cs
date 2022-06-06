@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] RiverManager _fallRiver;
     [SerializeField] GameObject _damageParticle;
     [SerializeField] GameObject _oishiiParticle;
+    [SerializeField] GameObject _gameClearPanel;
     [SerializeField] float m_speed = 10f;
-    [SerializeField] float _SpeedChange;
+    [SerializeField] float _SpeedChange = 0.2f;
     [SerializeField] string _speedUpTag = "SpeedUp";
     [SerializeField] string _speedDownTag = "SpeedDown";
     [SerializeField] string _clearTag = "GameClear";
@@ -56,6 +57,7 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(HitEffectCor(_damageParticle));
             _gameSpeed -= _SpeedChange;
+            _gameSpeed = Mathf.Max(0.4f, _gameSpeed);
             if (_fallRiver)
             {
                 _fallRiver.UpdateSpeed(_gameSpeed);
@@ -63,14 +65,9 @@ public class PlayerController : MonoBehaviour
         }
         else if (hitTag == _clearTag)
         {
-            if (_fallRiver)
-            {
-                _fallRiver.StopRiver();
-            }
-            if (timer)
-            {
-                timer.TimerStop();
-            }
+            _fallRiver?.StopRiver();
+            timer?.TimerStop();
+            _gameClearPanel?.SetActive(true);
         }
     }
 
