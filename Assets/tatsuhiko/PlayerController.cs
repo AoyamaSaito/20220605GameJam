@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,11 +10,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject _damageParticle;
     [SerializeField] GameObject _oishiiParticle;
     [SerializeField] GameObject _gameClearPanel;
+    [SerializeField] GameObject _gameOverPanel;
     [SerializeField] float m_speed = 10f;
     [SerializeField] float _SpeedChange = 0.2f;
+    [Header("HP")]
+    [SerializeField] int hp = 5;
+    [SerializeField] Text _hpText = null;
     [SerializeField] string _speedUpTag = "SpeedUp";
     [SerializeField] string _speedDownTag = "SpeedDown";
     [SerializeField] string _clearTag = "GameClear";
+
 
     float _gameSpeed = 1;
     Rigidbody2D _rb2D;
@@ -62,6 +68,19 @@ public class PlayerController : MonoBehaviour
             if (_fallRiver)
             {
                 _fallRiver.UpdateSpeed(_gameSpeed);
+            }
+
+            hp--;
+            if(_hpText)
+            {
+                _hpText.text = hp.ToString();
+            }
+            if(hp <= 0)
+            {
+                Destroy(gameObject); 
+                _fallRiver?.StopRiver();
+                timer?.TimerStop();
+                _gameOverPanel?.SetActive(true);
             }
         }
         else if (hitTag == _clearTag)
