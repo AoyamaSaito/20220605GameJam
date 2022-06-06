@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 6124440085407318675}
   - component: {fileID: 6124440085407318672}
   m_Layer: 5
-  m_Name: UI
+  m_Name: GamSceneUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -427,7 +427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6124440085621461352
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1381,7 +1381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6124440086594286948
 RectTransform:
   m_ObjectHideFlags: 0
