@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
             Destroy(col.gameObject);
             StartCoroutine(HitEffectCor(_damageParticle));
             _gameSpeed -= _SpeedChange;
-            _gameSpeed = Mathf.Max(0.4f, _gameSpeed);
+            _gameSpeed = Mathf.Max(0.6f, _gameSpeed);
             if (_fallRiver)
             {
                 _fallRiver.UpdateSpeed(_gameSpeed);

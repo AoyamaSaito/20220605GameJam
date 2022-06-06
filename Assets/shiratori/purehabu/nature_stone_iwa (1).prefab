@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3936913363897337232}
   - component: {fileID: 3936913363897337235}
   - component: {fileID: 6696043617273742079}
+  - component: {fileID: -5957372177896918335}
   m_Layer: 0
   m_Name: nature_stone_iwa (1)
   m_TagString: SpeedDown
@@ -101,3 +102,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.5
+--- !u!114 &-5957372177896918335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3936913363897337234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b51d8fd7a6358e04ab98430a51c84447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyPrefab: {fileID: 4527485729491120283, guid: 01d0e04a9286b144f97c8b044e9e5141, type: 3}
+  _source: {fileID: 0}

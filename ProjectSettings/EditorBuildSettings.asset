@@ -9,15 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Hikanyan's_Asset/Scene/StartSeen.unity
+    path: Assets/Hikanyan's_Asset/Scene/StartScene.unity
     guid: 5cb1d532cac811e41845574aa2cf561c
   - enabled: 1
-    path: Assets/Hikanyan's_Asset/Scene/GameScreen1.unity
-    guid: f97a6b66f4a47d14e8cff25560a82571
-  - enabled: 1
-    path: Assets/Hikanyan's_Asset/Scene/GameOver.unity
-    guid: 993e4bc8ab1dccc4da365c3ddb53faa9
-  - enabled: 1
-    path: Assets/Hikanyan's_Asset/Scene/GameClear.unity
-    guid: 450ac50161456f84c93eceb55df9aa50
+    path: Assets/Aoyama/Scene/MainScene.unity
+    guid: 89fa0040597a9bc4cac1db3c7141a455
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
