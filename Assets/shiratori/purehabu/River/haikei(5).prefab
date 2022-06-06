@@ -98,11 +98,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3936913363897337232, guid: 710272ce1e513694fab9649ba9c9cacf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.25778803
+      value: -0.277
       objectReference: {fileID: 0}
     - target: {fileID: 3936913363897337232, guid: 710272ce1e513694fab9649ba9c9cacf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03414315
+      value: -0.175
       objectReference: {fileID: 0}
     - target: {fileID: 3936913363897337232, guid: 710272ce1e513694fab9649ba9c9cacf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -159,7 +159,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 107152635380084104, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
       propertyPath: m_Name
-      value: RiverPlane (1)
+      value: haikei(5)
       objectReference: {fileID: 0}
     - target: {fileID: 722029749841155902, guid: d54dc282934ea6d47b4f94f7c0d12f4a, type: 3}
       propertyPath: m_RootOrder
@@ -241,11 +241,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3464107609469343769, guid: 0f394cce99d811b418785c9493487052, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.026153842
+      value: -0.271
       objectReference: {fileID: 0}
     - target: {fileID: 3464107609469343769, guid: 0f394cce99d811b418785c9493487052, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.18960685
+      value: 0.057
       objectReference: {fileID: 0}
     - target: {fileID: 3464107609469343769, guid: 0f394cce99d811b418785c9493487052, type: 3}
       propertyPath: m_LocalPosition.z
