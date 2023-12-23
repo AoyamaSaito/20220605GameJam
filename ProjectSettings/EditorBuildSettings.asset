@@ -5,16 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Hikanyan's_Asset/Scene/StartScene.unity
     guid: 5cb1d532cac811e41845574aa2cf561c
+  - enabled: 0
+    path: Assets/shiratori/MainScene.unity
+    guid: 89fa0040597a9bc4cac1db3c7141a455
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Aoyama/Scene/MainScene.unity
     guid: 9fc4e5b19f2e4f44488675eb16e52921
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   m_configObjects: {}
